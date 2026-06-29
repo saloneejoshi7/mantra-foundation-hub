@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown, Sparkles, BookOpen, Phone, Mail, MapPin } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { BOOKS } from "@/data/books";
+import exteriorImg from "@/assets/about/exterior-view.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -178,7 +179,7 @@ function Home() {
           <div className="reveal">
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
-                src="/src/assets/about/exterior-view.png"
+                src={exteriorImg}
                 alt="Mantra Foundation exterior"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
