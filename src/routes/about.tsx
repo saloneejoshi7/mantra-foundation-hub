@@ -151,7 +151,7 @@ function About() {
         </div>
         <ol className="relative mt-10 space-y-8 border-l-2 border-brand/20 pl-16 sm:pl-20">
           {[
-            { year: "2010", title: "Year of Establishment", body: "Mantra Foundation was born in Rajkot, Gujarat — built on a parent's love and a powerful belief." },
+            { year: "2016", title: "Year of Establishment", body: "Mantra Foundation was born in Rajkot, Gujarat — built on a parent's love and a powerful belief." },
             { year: "2015", title: "Functional Curriculum", body: "Launched our research-based curriculum focused on real-life skills, not just exams." },
             { year: "2020", title: "Vocational & Sports", body: "Expanded into therapies, skill training and sports — producing para-swimming champions." },
             { year: "Today", title: "Mantra Café (Upcoming)", body: "An inclusive café where students earn with pride as chefs, servers and hosts." },
@@ -174,9 +174,21 @@ function About() {
       <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-3">
           {[
-            { icon: Target, title: "Mission", text: "To empower differently-abled individuals with education, skills and dignity — preparing them for an independent life." },
-            { icon: Eye, title: "Vision", text: "An inclusive world where ability is measured by possibility, not limitation." },
-            { icon: Compass, title: "Objectives", text: "Deliver functional education, therapies, vocational training and sports opportunities that build confidence and self-reliance." },
+            {
+              icon: Target,
+              title: "Mission",
+              text: "To be a catalyst in providing quality education and functional skill programs that will enable the children to realize their optimal potential in academics, development of various skills, socio-emotional functions and independent living.",
+            },
+            {
+              icon: Eye,
+              title: "Vision",
+              text: "To provide world-class skill based Educational and Vocational Programs that shall enable specially-abled children use their potential for independent living, academics, development of various social skills and Self Dependent livelihood in long term.",
+            },
+            {
+              icon: Compass,
+              title: "Objectives",
+              text: "• To make children realize that they carry the Divine Master in the heart and are loveable and acceptable in the society.\n• To identify specific problems which are impeding the child's learning.\n• To devise methods and methodologies to overcome the reading/writing problems and problems faced in ADL (Activities of daily life).\n• To develop goals individually for each child as per their skills.\n• To setup objectives periodically to reach the desired goal for each child (Individual Educational Plan).\n• To train them appear for exams conducted by District Board / National Institute of Open Schooling (NIOS).\n• To provide the necessary corrective and rehabilitative training and aids.\n• To provide skill training (vocational training) as a part of learning and future rehabilitation, which in long term can help them in earning independent livelihood.",
+            },
           ].map((c, i) => {
             const Icon = c.icon;
             return (
@@ -189,7 +201,7 @@ function About() {
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+                <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{c.text}</p>
               </div>
             );
           })}
