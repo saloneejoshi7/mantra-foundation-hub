@@ -33,8 +33,9 @@ function BooksPage() {
     const q = query.trim().toLowerCase();
     return BOOKS.filter((b) => {
       if (filter !== "All" && b.subject !== filter) return false;
-      if (q && !`${b.subject} ${b.level}`.toLowerCase().includes(q)) return false;
-      return true;
+      if (!q) return true;
+      const hay = `${b.subject} ${b.level} ${b.title} ${b.id}`.toLowerCase();
+      return hay.includes(q);
     });
   }, [filter, query]);
 
@@ -54,14 +55,20 @@ function BooksPage() {
           </p>
 
           {/* Search */}
-          <div className="mx-auto mt-8 flex max-w-md items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-card">
-            <Search className="h-4 w-4 text-muted-foreground" />
+          <div className="mx-auto mt-8 flex max-w-md items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-card focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/30">
+            <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
             <input
-              type="search"
+              type="text"
+              inputMode="search"
+              enterKeyHint="search"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="none"
+              spellCheck={false}
               placeholder="Search by subject or level..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+              className="w-full min-w-0 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
               aria-label="Search books"
             />
           </div>
