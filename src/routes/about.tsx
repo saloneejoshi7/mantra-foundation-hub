@@ -4,11 +4,8 @@ import { Heart, Target, Eye, Compass, Users, GraduationCap, Sparkles } from "luc
 import exteriorImg from "@/assets/about/exterior-view.png";
 import facilitiesImg from "@/assets/about/facilities.png";
 import initiativesImg from "@/assets/about/initiatives.png";
-import missionImg from "@/assets/about/mission-vision.png";
-import objectiveImg from "@/assets/about/objective.png";
 import founders1 from "@/assets/about/founders-1.png";
 import founders2 from "@/assets/about/founders-2.png";
-import yearImg from "@/assets/about/year-of-establishment.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
