@@ -152,21 +152,51 @@ function About() {
           <div className="text-xs font-semibold uppercase tracking-wider text-brand">History</div>
           <h2 className="mt-2 font-display text-3xl font-bold sm:text-4xl">Foundation milestones</h2>
         </div>
-        <ol className="relative mt-10 space-y-8 border-l border-border pl-6 sm:pl-8">
+        <ol className="relative mt-10 space-y-8 border-l-2 border-brand/20 pl-16 sm:pl-20">
           {[
             { year: "2010", title: "Year of Establishment", body: "Mantra Foundation was born in Rajkot, Gujarat — built on a parent's love and a powerful belief." },
             { year: "2015", title: "Functional Curriculum", body: "Launched our research-based curriculum focused on real-life skills, not just exams." },
             { year: "2020", title: "Vocational & Sports", body: "Expanded into therapies, skill training and sports — producing para-swimming champions." },
             { year: "Today", title: "Mantra Café (Upcoming)", body: "An inclusive café where students earn with pride as chefs, servers and hosts." },
           ].map((m, i) => (
-            <li key={i} className="reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-              <span className="absolute -left-[9px] grid h-4 w-4 place-items-center rounded-full bg-[image:var(--gradient-brand)] ring-4 ring-background" />
-              <div className="text-xs font-bold uppercase tracking-wider text-brand">{m.year}</div>
-              <h3 className="mt-1 font-display text-lg font-semibold">{m.title}</h3>
+            <li key={i} className="reveal relative" style={{ transitionDelay: `${i * 80}ms` }}>
+              <span
+                aria-hidden
+                className="absolute -left-16 top-0 grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-brand)] text-[11px] font-bold tracking-wide text-primary-foreground shadow-soft ring-4 ring-background sm:-left-20 sm:h-16 sm:w-16 sm:text-xs"
+              >
+                {m.year}
+              </span>
+              <h3 className="font-display text-lg font-semibold leading-tight">{m.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{m.body}</p>
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* Mission / Vision / Objectives — text-only cards (images contain duplicate content) */}
+      <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-3">
+          {[
+            { icon: Target, title: "Mission", text: "To empower differently-abled individuals with education, skills and dignity — preparing them for an independent life." },
+            { icon: Eye, title: "Vision", text: "An inclusive world where ability is measured by possibility, not limitation." },
+            { icon: Compass, title: "Objectives", text: "Deliver functional education, therapies, vocational training and sports opportunities that build confidence and self-reliance." },
+          ].map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <div
+                key={c.title}
+                className="reveal rounded-3xl border border-border/60 bg-card p-7 shadow-card hover-lift"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand-deep">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-4 font-display text-xl font-semibold">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* Mission / Vision / Objective */}
