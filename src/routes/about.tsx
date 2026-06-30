@@ -199,34 +199,6 @@ function About() {
         </div>
       </section>
 
-      {/* Mission / Vision / Objective */}
-      <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {[
-            { icon: Target, title: "Mission", img: missionImg, text: "To empower differently-abled individuals with education, skills and dignity — preparing them for an independent life." },
-            { icon: Eye, title: "Vision", img: missionImg, text: "An inclusive world where ability is measured by possibility, not limitation." },
-            { icon: Compass, title: "Objectives", img: objectiveImg, text: "Deliver functional education, therapies, vocational training and sports opportunities that build confidence and self-reliance." },
-          ].map((c, i) => {
-            const Icon = c.icon;
-            return (
-              <div key={c.title} className="reveal overflow-hidden rounded-3xl bg-card shadow-card hover-lift" style={{ transitionDelay: `${i * 80}ms` }}>
-                <div className="aspect-[16/10] overflow-hidden bg-muted">
-                  <img src={c.img} alt={c.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand-soft text-brand-deep">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="font-display text-xl font-semibold">{c.title}</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
 
       {/* Founders */}
       <section className="mx-auto mt-24 max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -245,31 +217,6 @@ function About() {
         </div>
       </section>
 
-      {/* Initiatives & Year */}
-      <section className="mx-auto mt-24 max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="reveal overflow-hidden rounded-3xl bg-card shadow-card">
-            <img src={initiativesImg} alt="Initiatives by Mantra Foundation" loading="lazy" className="aspect-[4/3] w-full object-cover" />
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold">Initiatives by Mantra Foundation</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Programs and outreach designed around real-world independence — therapy, training,
-                inclusion and community.
-              </p>
-            </div>
-          </div>
-          <div className="reveal overflow-hidden rounded-3xl bg-card shadow-card">
-            <img src={yearImg} alt="Year of Establishment" loading="lazy" className="aspect-[4/3] w-full object-cover" />
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold">Year of Establishment</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Established with the belief that every child deserves the dignity of learning at
-                their own pace.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
