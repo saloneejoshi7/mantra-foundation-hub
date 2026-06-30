@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Mantra Foundation is an educational NGO in Rajkot, Gujarat, empowering differently-abled individuals through special education, therapies, skill training and sports.",
       },
       { name: "author", content: "Mantra Foundation" },
-      { property: "og:title", content: "Mantra Foundation — Empowering Through Education" },
+      { property: "og:title", content: "Mantra Foundation — An Institute for Differently Abled, Rajkot" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mantra Foundation — An Institute for Differently Abled, Rajkot" },
+      { name: "description", content: "Mantra Foundation Hub is a responsive website for an educational NGO." },
+      { property: "og:description", content: "Mantra Foundation Hub is a responsive website for an educational NGO." },
+      { name: "twitter:description", content: "Mantra Foundation Hub is a responsive website for an educational NGO." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a384f48c-fd92-4585-b1f3-7310da921646/id-preview-6fab512e--5f87ab88-d008-4f30-9143-006c7593ca64.lovable.app-1782805071375.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a384f48c-fd92-4585-b1f3-7310da921646/id-preview-6fab512e--5f87ab88-d008-4f30-9143-006c7593ca64.lovable.app-1782805071375.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
