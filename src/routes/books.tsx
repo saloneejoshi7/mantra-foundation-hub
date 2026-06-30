@@ -33,8 +33,9 @@ function BooksPage() {
     const q = query.trim().toLowerCase();
     return BOOKS.filter((b) => {
       if (filter !== "All" && b.subject !== filter) return false;
-      if (q && !`${b.subject} ${b.level}`.toLowerCase().includes(q)) return false;
-      return true;
+      if (!q) return true;
+      const hay = `${b.subject} ${b.level} ${b.title} ${b.id}`.toLowerCase();
+      return hay.includes(q);
     });
   }, [filter, query]);
 
