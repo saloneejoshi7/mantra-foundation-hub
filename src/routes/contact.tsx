@@ -54,7 +54,7 @@ function Contact() {
         <div className="grid gap-4 sm:grid-cols-3">
           {[
             { icon: MapPin, title: "Visit", body: "D 136, Raviratna Park Main Rd, Golden Park, Rajkot, Gujarat 360005" },
-            { icon: Phone, title: "Call", body: "+91 97123 99777", href: "tel:+919712399777" },
+            { icon: Phone, title: "Call", body: "+91 97123 99777", href: "tel:+919925949494" },
             { icon: Mail, title: "Email", body: "mantrafoundationrajkot@gmail.com", href: "mailto:mantrafoundationrajkot@gmail.com" },
           ].map((c, i) => {
             const Icon = c.icon;

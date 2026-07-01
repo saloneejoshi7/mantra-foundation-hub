@@ -3,9 +3,8 @@ import { Layout } from "@/components/Layout";
 import { Heart, Target, Eye, Compass, Users, GraduationCap, Sparkles } from "lucide-react";
 import exteriorImg from "@/assets/about/exterior-view.png";
 import facilitiesImg from "@/assets/about/facilities.png";
-import initiativesImg from "@/assets/about/initiatives.png";
 import founders1 from "@/assets/about/founders-1.png";
-import founders2 from "@/assets/about/founders-2.png";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -136,9 +135,8 @@ function About() {
               capable of."
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             <img src={facilitiesImg} alt="Facilities" className="aspect-square w-full rounded-2xl object-cover" loading="lazy" />
-            <img src={initiativesImg} alt="Initiatives" className="aspect-square w-full rounded-2xl object-cover" loading="lazy" />
           </div>
         </div>
       </section>
@@ -215,8 +213,8 @@ function About() {
           <div className="text-xs font-semibold uppercase tracking-wider text-brand">Founders</div>
           <h2 className="mt-2 font-display text-3xl font-bold sm:text-4xl">Profile of Founders</h2>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {[founders1, founders2].map((src, i) => (
+        <div className="mt-10 grid gap-6 sm:grid-cols-1 max-w-md mx-auto">
+  {[founders1].map((src, i) => (
             <div key={i} className="reveal overflow-hidden rounded-3xl bg-card shadow-card" style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="aspect-[4/3] overflow-hidden bg-muted">
                 <img src={src} alt={`Founder ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />

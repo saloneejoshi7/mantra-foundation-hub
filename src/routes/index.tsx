@@ -250,7 +250,7 @@ function Home() {
             </li>
             <li className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 backdrop-blur">
               <Phone className="h-5 w-5 shrink-0" />
-              <a href="tel:+919712399777">+91 97123 99777</a>
+              <a href="tel:+919925949494">+91 97123 99777</a>
             </li>
             <li className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 backdrop-blur">
               <Mail className="h-5 w-5 shrink-0" />
